@@ -1,4 +1,4 @@
-# brainfuck
+# Brainfuck
 
 
 Brainfuck is a minimalistic programming language 
@@ -13,9 +13,7 @@ The following introduction to brainfuck is borrowed
 from [here](http://www.muppetlabs.com/~breadbox/bf/).
 
 
-## Brainfuck
-
-An Eight-Instruction Turing-Complete Programming Language
+## Brainfuck --- An Eight-Instruction Turing-Complete Programming Language
 
 Brainfuck is the ungodly creation of Urban Müller, whose goal was apparently to create a Turing-complete language for which he could write the smallest compiler ever, for the Amiga OS 2.0. His compiler was 240 bytes in size. (Though he improved upon this later -- he informed me at one point that he had managed to bring it under 200 bytes.)
 
@@ -27,6 +25,7 @@ A Brainfuck program has an implicit byte pointer, called "the pointer", which is
 
 The Brainfuck programming language consists of eight commands, each of which is represented as a single character.
 
+```
 > 	Increment the pointer.
 < 	Decrement the pointer.
 + 	Increment the byte at the pointer.
@@ -35,9 +34,11 @@ The Brainfuck programming language consists of eight commands, each of which is 
 , 	Input a byte and store it in the byte at the pointer.
 [ 	Jump forward past the matching ] if the byte at the pointer is zero.
 ] 	Jump backward to the matching [ unless the byte at the pointer is zero.
+```
 
 The semantics of the Brainfuck commands can also be succinctly expressed in terms of C, as follows (assuming that p has been previously defined as a char*):
 
+```
 > 	becomes 	++p;
 < 	becomes 	--p;
 + 	becomes 	++*p;
@@ -46,21 +47,7 @@ The semantics of the Brainfuck commands can also be succinctly expressed in term
 , 	becomes 	*p = getchar();
 [ 	becomes 	while (*p) {
 ] 	becomes 	}
+```
 
-
-=========================================================
-how to translate these atomic operations to bf lanaguage
-m[i] = x
-m[i] = m[j]
-m[i] = m[j]+m[k]
-m[i] = m[j]-m[k]
-m[i] = m[j]*m[k]
-(m[i],m[j]) = m[k]/m[l]
-
-
-while ( m[i] ) {
-     .....
-     m[i]--;
-}
 
 
