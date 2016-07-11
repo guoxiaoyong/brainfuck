@@ -13,7 +13,8 @@ The following introduction to brainfuck is borrowed
 from [here](http://www.muppetlabs.com/~breadbox/bf/).
 
 
-## Brainfuck --- An Eight-Instruction Turing-Complete Programming Language
+# Brainfuck 
+## An Eight-Instruction Turing-Complete Programming Language
 
 Brainfuck is the ungodly creation of Urban Müller, whose goal was apparently to create a Turing-complete language for which he could write the smallest compiler ever, for the Amiga OS 2.0. His compiler was 240 bytes in size. (Though he improved upon this later -- he informed me at one point that he had managed to bring it under 200 bytes.)
 
